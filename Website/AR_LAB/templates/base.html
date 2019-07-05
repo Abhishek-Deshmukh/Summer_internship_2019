@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<!-- Website template by freewebsitetemplates.com -->
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Tailor Shop Website Template</title>
+	<link rel="stylesheet" type="text/css" href="{% static './css/style.css' %}">
+	<!--[if IE 7]><link rel="stylesheet" type="text/css" href="{% static './css/ie7.css' %}"><![endif]-->
+</head>
+<body>
+	<div id="header">
+		<div>
+			<a href="{% url 'home' %}" id="logo"><img src="{% static 'images/logo2.png' %}" alt="Logo"></a>
+			<ul>
+				<li class="current">
+					<a href="{% url 'home' %}">Home</a>
+				</li>
+				<li>
+					<a href="{% url 'members' %}">Members</a>
+				</li>
+				<li>
+					<a href="{% url 'gallery' %}">Gallery</a>
+				</li>
+				<li>
+					<a href="{% url 'research' %}">Research</a>
+				</li>
+				<li>
+					<a href="{% url 'publications' %}">Publications</a>
+				</li>
+				<li>
+					<a href="{% url 'contact' %}">Contact</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	{% block content %}
+	{% endblock content %}
+	<div id="footer">
+		<div>
+			<div class="first">
+				<p>
+					Website Designed and maintained by Abhishek Anil Deshmukh.
+				</p>
+			</div>
+			<div class="last">
+				<h4>Social</h4>
+				<div>
+					<a href="#" target="_blank" id="facebook">Facebook</a>
+					<a href="#" target="_blank" id="twitter">Twitter</a>
+					<a href="#" target="_blank" id="googleplus">Google&#43;</a>
+				</div>
+			</div>
+		</div>
+		<p class="footnote">
+			&copy; Copyright 2012. All rights reserved.
+		</p>
+	</div>
+</body>
+</html>

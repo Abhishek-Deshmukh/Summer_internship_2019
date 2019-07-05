@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+	<div id="body">
+		<div id="featured">
+			<h1>Publications</h1>
+		</div>
+		<div id="content">
+			<div id="product">
+				<ul>
+					{% for publication in publications %}
+					<li>
+						<p>
+						{{publication.content}}. {{publication.publication}},{{publication.year}}.({{publication.page_no}})
+						</p>
+					</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+	</div>
+{% endblock content %}

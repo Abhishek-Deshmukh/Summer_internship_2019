@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div id="body">
+		<div id="featured">
+			<div class="first">
+				<div>
+					<h2>Microbiology Lab</h2>
+					<p>
+						This is just a place holder, so you can see what the site would look like. This is just a place holder, so you can see what the site would look like.
+					</p>
+					<a href="{% url 'contact' %}" id="shopnow">Contact Us</a>
+				</div>
+				<span><img src="{% static 'images/tuxedo1.jpg' %}" alt="Image"></span>
+			</div>
+			<div class="last">
+				<h3>Handcrafted and made from 100% Wool</h3>
+				<ul>
+					<li>
+						<a href="product.html"><img src="{% static 'images/tuxedo2.jpg' %}" alt="Image"></a>
+						<p>
+							This is just a place holder
+						</p>
+					</li>
+					<li>
+						<a href="product.html"><img src="{% static 'images/tuxedo3.jpg' %}" alt="Image"></a>
+						<p>
+							This is just a place holder
+						</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div id="content">
+			<div id="home">
+				<div class="section">
+					<h4>About</h4>
+					<h1>Mechanism and Regulation of Nuclear Expansion: </h1>
+					<ul>
+						<li>
+							<img src="{% static 'images/handmade1.jpg' %}" alt="Image">
+							<h2>Handmade</h2>
+							<p>
+								This is just a place holder, so you can see what the site would look like.
+							</p>
+						</li>
+						<li>
+							<img src="{% static 'images/design1.jpg' %}" alt="Image">
+							<h2>Design</h2>
+							<p>
+								This is just a place holder, so you can see what the site would look like.
+							</p>
+						</li>
+						<li>
+							<img src="{% static 'images/perfectfit1.jpg' %}" alt="Image">
+							<h2>Perfect Fit</h2>
+							<p>
+								This is just a place holder, so you can see what the site would look like.
+							</p>
+						</li>
+					</ul>
+				</div>
+				<div class="sidebar">
+					<h4>Blog</h4>
+					<ul>
+						<li>
+							<span>May 1, 2012  posted by: Jo</span>
+							<h2>This is just a place holder,</h2>
+							<p>
+								so you can see what the site would look like. <a href="blog.html" class="readmore"> - read more</a>
+							</p>
+						</li>
+						<li>
+							<span>May 2, 2012  posted by: Anne</span>
+							<h2>This is just a place holder,</h2>
+							<p>
+								so you can see what the site would look like. <a href="blog.html" class="readmore"> - read more</a>
+							</p>
+						</li>
+						<li>
+							<span>May 3, 2012  posted by: Marie</span>
+							<h2>This is just a place holder,</h2>
+							<p>
+								so you can see what the site would look like. <a href="blog.html" class="readmore"> - read more</a>
+							</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	{% endblock content %}
