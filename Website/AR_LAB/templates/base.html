@@ -11,30 +11,43 @@
 <body>
 	<div id="header">
 		<div>
-			<a href="{% url 'home' %}" id="logo"><img src="{% static 'images/logo2.png' %}" alt="Logo"></a>
+			<a href="{% url 'home' %}" id="logo"><img src="{% static 'images/logo2.png' %}"></a>
 			<ul>
-				<li class="current">
+				<li class="{% if request.get_full_path == "/" %}
+						current
+					{% endif %}">
 					<a href="{% url 'home' %}">Home</a>
 				</li>
-				<li>
+				<li class="{% if request.get_full_path == "/members/" %}
+						current
+					{% endif %}">
 					<a href="{% url 'members' %}">Members</a>
 				</li>
-				<li>
+				<li class="{% if request.get_full_path == "/gallery" %}
+						current
+					{% endif %}">
 					<a href="{% url 'gallery' %}">Gallery</a>
 				</li>
-				<li>
+				<li class="{% if request.get_full_path == "/research/" %}
+						current
+					{% endif %}">
 					<a href="{% url 'research' %}">Research</a>
 				</li>
-				<li>
+				<li class="{% if request.get_full_path == "/research/publications/" %}
+						current
+					{% endif %}">
 					<a href="{% url 'publications' %}">Publications</a>
 				</li>
-				<li>
+				<li class="{% if request.get_full_path == "/contact" %}
+						current
+					{% endif %}">
 					<a href="{% url 'contact' %}">Contact</a>
 				</li>
 			</ul>
 		</div>
 	</div>
 	{% block content %}
+
 	{% endblock content %}
 	<div id="footer">
 		<div>
@@ -53,7 +66,7 @@
 			</div>
 		</div>
 		<p class="footnote">
-			&copy; Copyright 2012. All rights reserved.
+			&copy; Copyright 2019. All rights reserved.
 		</p>
 	</div>
 </body>

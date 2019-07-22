@@ -1,12 +1,15 @@
 from django.shortcuts import render
-from .models import Publications
+from .models import Publication, Project
 
 # Create your views here.
 def research(request):
-    return render(request,'research.html')
+    context = {
+            'projects' : Project.objects.all(),
+    }
+    return render(request,'research.html', context)
 
 def publications(request):
     context = {
-            'publications' : Publications.objects.all(),
+            'publications' : Publication.objects.all(),
     }
     return render(request,'publications.html', context)

@@ -34,7 +34,7 @@
 		<div id="content">
 			<div id="home">
 				<div class="section">
-					<h4>About</h4>
+					<h4>Ongoing Research</h4>
 					<h1>Mechanism and Regulation of Nuclear Expansion: </h1>
 					<ul>
 						<li>
@@ -61,29 +61,16 @@
 					</ul>
 				</div>
 				<div class="sidebar">
-					<h4>Blog</h4>
+					<h4>Publications</h4>
 					<ul>
+						{% for publication in publications %}
 						<li>
-							<span>May 1, 2012  posted by: Jo</span>
-							<h2>This is just a place holder,</h2>
+							<span>{{publication.year}}</span>
 							<p>
-								so you can see what the site would look like. <a href="blog.html" class="readmore"> - read more</a>
+							{{publication.content}} <a href="{% url 'publications' %}" class="readmore"> - read more</a>
 							</p>
 						</li>
-						<li>
-							<span>May 2, 2012  posted by: Anne</span>
-							<h2>This is just a place holder,</h2>
-							<p>
-								so you can see what the site would look like. <a href="blog.html" class="readmore"> - read more</a>
-							</p>
-						</li>
-						<li>
-							<span>May 3, 2012  posted by: Marie</span>
-							<h2>This is just a place holder,</h2>
-							<p>
-								so you can see what the site would look like. <a href="blog.html" class="readmore"> - read more</a>
-							</p>
-						</li>
+						{% endfor %}
 					</ul>
 				</div>
 			</div>
